@@ -109,6 +109,7 @@ input[type="radio"]:checked+label {
     padding: 1.5rem 1.2rem 1rem 1.2rem;
     height: calc(100% - 2rem);
     margin-top: 2rem;
+    transition: 300ms;
 }
 
 .activity-container:hover::before {
