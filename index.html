@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- displays site properly based on user's device -->
+
+		<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+		<title>Frontend Mentor | Time tracking dashboard</title>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap"
+			rel="stylesheet">
+		<link rel="stylesheet" href="style.css">
+
+		<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+		<style>
+			.attribution {
+				font-size: 11px;
+				text-align: center;
+			}
+
+			.attribution a {
+				color: #4CCE84;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<header></header>
+		<main>
+
+			<section id="mainCard">
+
+				<div>
+					<img id="profilePic" src="images/image-jeremy.png" alt="Jeremy  Robson">
+					<p>Report for</p>
+					<h1>Jeremy Robson</h1>
+				</div>
+
+				<fieldset>
+					<input type="radio" name="period" id="daily" value="Daily" checked><label for="daily">Daily</label>
+					<input type="radio" name="period" id="weekly" value="Weekly"><label for="weekly">Weekly</label>
+					<input type="radio" name="period" id="monthly" value="Monthly"><label for="monthly">Monthly</label>
+				</fieldset>
+			</section>
+
+			<div class="activity-container">
+				<span>Work</span>
+				<img class="menu-button" src="images/icon-ellipsis.svg" alt="menu">
+				<h2>5hrs</h2>
+
+				<p>Previous - 7hrs</p>
+
+			</div>
+
+
+			<div class="activity-container">
+				<span>Play</span>
+				<img class="menu-button" src="images/icon-ellipsis.svg" alt="menu">
+				<h2>1hr</h2>
+
+				<p>Previous - 2hrs</p>
+
+			</div>
+			<div class="activity-container">
+				<span>Study</span>
+				<img class="menu-button" src="images/icon-ellipsis.svg" alt="menu">
+				<h2>0hrs</h2>
+				<p>Previous - 1hr</p>
+
+			</div>
+			<div class="activity-container">
+				<span>Exercise</span>
+				<img class="menu-button" src="images/icon-ellipsis.svg" alt="menu">
+				<h2>1hr</h2>
+				<p>Previous - 1hr</p>
+			</div>
+			<div class="activity-container">
+				<span>Social</span>
+				<img class="menu-button" src="images/icon-ellipsis.svg" alt="menu">
+				<h2>1hr</h2>
+				<p>Previous - 3hrs</p>
+			</div>
+			<div class="activity-container">
+				<span>Self Care</span>
+				<img class="menu-button" src="images/icon-ellipsis.svg" alt="menu">
+				<h2>0hrs</h2>
+				<p>Previous - 1hr</p>
+			</div>
+		</main>
+
+		<footer>
+			<div class="attribution">
+				Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+				Coded by <a href="https://www.junaidgandhi.com">Mohammed Junaid Gandhi</a>.
+			</div>
+		</footer>
+	</body>
+	<script src="script.js"></script>
+
+</html>

@@ -1,0 +1,241 @@
+* {
+    font-family: 'Rubik', sans-serif;
+    box-sizing: border-box;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #0D1323;
+    color: white;
+}
+
+h1 {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 300;
+    font-size: 2rem;
+    margin-bottom: 35%;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 0 20%;
+    gap: 4% 2%;
+}
+
+#mainCard {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    background-color: #1D204B;
+    border-radius: .5rem;
+}
+
+#mainCard div:first-child {
+    background-color: #5746EA;
+    border-radius: .5rem;
+    padding: 1rem;
+}
+
+#profilePic {
+    width: 35%;
+    border: 2px solid white;
+    border-radius: 50%;
+    margin-bottom: 2rem;
+}
+
+p {
+    font-size: .8em;
+    opacity: .7;
+    font-weight: 100;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+fieldset {
+    border: none;
+}
+
+input[type="radio"]+label {
+    margin: 1rem 1.5rem;
+    font-weight: 400;
+    font-size: .8rem;
+    cursor: pointer;
+    display: block;
+    color: rgb(76, 81, 136);
+    transition: 300ms;
+}
+
+input[type="radio"]+label:hover {
+    color: white;
+}
+
+input[type="radio"]:checked+label {
+    color: white;
+}
+
+.activity-container::before {
+    content: "";
+    background-image: url("images/icon-work.svg");
+    background-repeat: no-repeat;
+    background-size: 3.2rem;
+    background-position: 95% -7.5%;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #FF8B64;
+    z-index: -1;
+    margin: -2rem 0 0 0;
+    border-radius: .5rem;
+    transition: 300ms;
+}
+
+.activity-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+    position: relative;
+    background-color: hsl(236, 44%, 20%);
+    border-radius: .5rem;
+    padding: 1.5rem 1.2rem 1rem 1.2rem;
+    height: calc(100% - 2rem);
+    margin-top: 2rem;
+}
+
+.activity-container:hover::before {
+    transform: translateY(-5px);
+}
+
+.activity-container:hover {
+    cursor: pointer;
+    background-color: hsl(236, 41%, 34%);
+}
+
+.activity-container img {
+    justify-self: flex-end;
+}
+
+.activity-container img:hover {
+    cursor: pointer;
+}
+
+.activity-container h2 {
+    grid-column: 1 / 3;
+    align-self: center;
+    font-weight: 200;
+    font-size: 3rem;
+}
+
+.activity-container p {
+    grid-column: 1 / 4;
+}
+
+.activity-container:nth-child(3)::before {
+    background-image: url("images/icon-play.svg");
+    background-color: #56C2E6;
+}
+
+.activity-container:nth-child(4)::before {
+    background-image: url("images/icon-study.svg");
+    background-color: #FF5E7D;
+}
+
+.activity-container:nth-child(5)::before {
+    background-image: url("images/icon-exercise.svg");
+    background-color: #4CCE84;
+    background-position: 95% 0%;
+}
+
+.activity-container:nth-child(6)::before {
+    background-image: url("images/icon-social.svg");
+    background-color: #7335D3;
+}
+
+.activity-container:nth-child(7)::before {
+    background-image: url("images/icon-self-care.svg");
+    background-color: #F1C75A;
+}
+
+.attribution {
+    justify-self: flex-end;
+    margin-top: 2rem;
+}
+
+@media screen and (max-width: 767px) {
+    main {
+        width: 90vw;
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 10% 0;
+        gap: 2% 0;
+    }
+
+    #mainCard {
+        grid-row-start: 1;
+        grid-row-end: 2;
+        background-color: #1D204B;
+        border-radius: .5rem;
+    }
+
+    #mainCard div:first-child {
+        background-color: #5746EA;
+        border-radius: .5rem;
+        padding: 1rem;
+        display: grid;
+        grid-template-columns: auto 75%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #profilePic {
+        width: 65%;
+        background-color: #759373;
+        border: 2px solid white;
+        border-radius: 50%;
+        margin-bottom: 0;
+        grid-row-start: 1;
+        grid-row-end: 3;
+        justify-self: center;
+        align-self: center;
+    }
+
+    h1 {
+        font-weight: 300;
+        font-size: 2rem;
+        margin-bottom: 0;
+        padding: 0;
+        align-self:flex-start
+    }
+
+    #mainCard div:first-child p {
+        align-self: flex-end;
+    }
+    
+
+    fieldset {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .activity-container {
+        grid-template-rows: 1fr 2fr;
+    }
+
+    .activity-container h2 {
+        grid-column: 1 / 2;
+    }
+
+    .activity-container p {
+        grid-column: 2 / 3;
+        align-self: center;
+        justify-self: flex-end;
+    }
+}
